@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Fahed</title>
     <link rel="icon" type="image/x-icon" href="Fahed.png">
-
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        img {
-            border-radius: 50%;
-            width: 100%;
+        html {
+            scroll-behavior: smooth;
         }
 
-        a {
-            color: black;
+        .profile-img {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 250px;
         }
 
         .text-typing h3 {
@@ -45,571 +47,266 @@
                 border-right: 2px solid #222;
             }
         }
+
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+            padding-left: 2rem;
+            border-left: 3px solid #6c757d;
+            /* Vertical line color */
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2.5rem;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .timeline-content h5 {
+            margin-top: 0;
+            font-weight: bold;
+        }
+
+        .timeline-content ul {
+            margin-bottom: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: none;
+            /* Hidden by default */
+        }
     </style>
 </head>
 
-<body>
-    <!--Header(start)-->
-    <table id="header" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="grey">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
-                    <tr>
-                        <td>
-                            &nbsp;
-
-                        </td>
-
-                        <td>
-                            <font face="Comic sans MS" size="6">
-                                <b>Mohammed Fahed</b>
-                            </font>
-                        </td>
-
-                        <td width="15%">
-                            &nbsp;
-                        </td>
-
-                        <!-- <td>
-                            <a href="#home" 
-                               style="text-decoration:none">
-                                <font face="Verdana" 
-                                      size="5" color=black>
-                                    Home
-                                </font>
-                            </a>
-                        </td> -->
-
-                        <!-- <td>
-                            |
-                            |
-                        </td> -->
-
-                        <td>
-                            <a href="#about" style="text-decoration:none">
-                                <font face="Verdana" size="5" color=black>
-                                    About Me
-                                </font>
-                            </a>
-                        </td>
-
-                        <td>
-                            |
-                        </td>
-
-                        <td>
-                            <a href="#projects" style="text-decoration:none">
-                                <font face="Verdana" size="5" color=black>
-                                    Projects
-                                </font>
-                            </a>
-                        </td>
-
-                        <td>
-                            |
-                        </td>
-
-                        <td>
-                            <a href="#achievements" style="text-decoration:none">
-                                <font face="Verdana" size="5" color=black>
-                                    Achievements
-                                </font>
-                            </a>
-                        </td>
-
-                        <!-- <td>
-                            |
-                        </td> -->
-
-                        <!-- <td>
-                            <a href="#contact" 
-                               style="text-decoration:none">
-                                <font face="Verdana" 
-                                      size="5" color=black>
-                                    Contact
-                                </font>
-                            </a>
-                        </td> -->
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Header(end)-->
-
-    <!--Home(start)-->
-    <table id="home" border="1" width="100%" cellpadding="20" cellspacing="0" bgcolor="black">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
-                    <tr>
-                        <td align="center" valign="middle" class="text-typing">
-                            <h3>
-                                <font face="Verdana" size="6" color="#ffffff">
-                                    Hi there!
-                                </font>
-                            </h3>
-
-                            <h2>
-                                <font face="Verdana" size="6" color="#4CAF50">
-                                    <!-- Freelance Programmer -->
-                                </font>
-                            </h2>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Home(end)-->
-
-
-    <!--About(start)-->
-    <table id="about" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
-                    <tr>
-                        <td align="center" valign="middle" colspan="2">
-                            <font face="Verdana" size="7" color="grey">
-                                About Me
-                            </font>
-                            <hr color="grey" width="90">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="40%">
-                            <img src="Fahed-pic.jpeg">
-                        </td>
-
-                        <td width="60%">
-                            <font face="Verdana" size="4" color="white">
-                                Thanks for your interest, here
-                                is a quick story of me.
-                                <hr color="black">
-                                I am Mohammed Fahed, a BITS alumunus and a Software Engineer.
-                                <hr color="black">
-
-                                I do my work mainly in Python,
-                                and Golang. Python, RestAPI
-                                and Algorithm are my stronger sections.
-                                Besides these I know Web Development,
-                                LINUX and database as well.
-                                <hr color="black">
-                                I am passionate about learning new technologies and
-                                solving complex problems with minimalistic approaches.
-                                I value collaboration, quality, and innovation, and
-                                I aim to deliver high-performance and scalable solutions
-                                that meet the needs and expectations of the users and the clients.
-                                I am always looking for new challenges and opportunities to grow
-                                and contribute to the software engineering field.
-                                <hr color="black">
-                                I have more than 8 years of experience in software engineering.
-                                I Have developed several tools to support storage engineers,
-                                team leads, and management, such as log analysers,
-                                intervention portals, and automated reports.
-                                I participated in all stages of SDLC, from design to maintenance,
-                                and conducted code reviews.
-                                I have a Master's and Bachelor's from BITS Pilani
-                                and a Diploma from Jamia Millia Islamia.
-                                <hr color="black">
-                                Thanks again for reading this,
-                                Let's work together to build things that are ground-breaking.
-                                <hr color="black">
-                                Cheers,
-                                <br>
-                                <b>Fahed.</b>
-                            </font>
-                        </td>
-                    </tr>
-                </table>
-                <hr color="black">
-                <hr color="black">
-                <hr color="black">
-            </td>
-        </tr>
-    </table>
-    <!--About(end)-->
-
-
-    <!--Projects(start)-->
-    <table id="projects" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
-                    <tr>
-                        <td align="center" valign="middle" colspan="2">
-                            <font face="Verdana" size="7" color="black">
-                                Projects
-                            </font>
-                            <hr color="black" width="90">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <font face="Times New Roman" size="5" color="black">
-                                <ul>
-                                    <li>
-                                        Escalation Dashboard
-                                        <!-- <a href="#" 
-                                           style="text-decoration:none">
-                                            &nbsp; ➲
-                                        </a> -->
-                                    </li>
-
-                                    <li>
-                                        <hr color="#c2c0c3">
-                                        Intervention Portal
-                                    </li>
-
-                                    <li>
-                                        <hr color="#c2c0c3">
-                                        Leave And Attendance Tracker
-
-                                    </li>
-
-                                    <li>
-                                        <hr color="#c2c0c3">
-                                        Log Analyzer for Storage Devices
-
-                                    </li>
-
-                                    <li>
-                                        <hr color="#c2c0c3">
-                                        Storage and Backup Manager
-
-                                    </li>
-
-                                    <li>
-                                        <hr color="#c2c0c3">
-                                        Escalation Dashboard
-
-                                    </li>
-
-                                    <li>
-                                        <hr color="#c2c0c3">
-                                        Monitoring Tool
-
-                                    </li>
-
-
-                                </ul>
-                                <hr color="#c2c0c3">
-                                <hr color="#c2c0c3">
-                                <hr color="#c2c0c3">
-                                <hr color="#c2c0c3">
-                            </font>
-                        </td>
-
-                        <!-- <td width="45%">
-                            <img src="img.png" 
-                                 alt="Project" width="75%">
-                        </td> -->
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Projects(end)-->
-
-    <!--Achievement(start)-->
-    <table id="achievements" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <font face="Verdana" size="7" color="grey">
-                                Achievements
-                                <hr color="grey" width="100">
-                            </font>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <font face="Verdana" size="4" color="white">
-                                <ul>
-                                    <li>
-                                        <b>Software Engineer at Wipro.</b>
-                                        <ul>
-                                            <li>
-                                                December,2016 - October 2022.
-                                            </li>
-                                            <li>
-                                                Got skilled in multiple technologies.
-                                            </li>
-                                            <li>
-                                                Worked on multiple projects for multiple teams.
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <hr color="black">
-                                        <hr color="black">
-                                        <hr color="black">
-                                        <b>Senior Engineer at Movate</b>
-                                        <ul>
-                                            <li>
-                                                October,2022 - November 2024.
-                                            </li>
-                                            <li>
-                                                Learned new technology and implemented it.
-                                            </li>
-                                            <li>
-                                                worked on multiple projects and POCs
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- <li>
-                                        <hr color="black">
-                                        <hr color="black">
-                                        <hr color="black">
-                                        <b>Student</b>
-                                        <ul>
-                                            <li>
-                                                October,2020.
-                                            </li>
-                                            <li>
-                                                Still studying things to achieve goals.
-                                            </li>
-                                            <hr color="black">
-                                            <hr color="black">
-                                            <hr color="black">
-                                            <hr color="black">
-                                            <hr color="black">
-                                        </ul>
-                                    </li> -->
-
-                                </ul>
-
-                            </font>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Achievement(end)-->
-
-
-    <!--Contact(start)-->
-    <!-- <table id="contact" border="0" width="100%" 
-        cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" 
-                    cellspacing="0" width="80%" align="center">
-                    <tr>
-                        <td height="180" align="center" 
-                            valign="middle" colspan="2">
-                            <font face="Verdana" size="7" 
-                                color="black">
-                                Contact
-                            </font>
-                            <hr color="black" width="90">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td align="center" valign="top">
-                            <table border="0" width="50%" cellpadding="15" 
-                                cellspacing="0" align="center" bgcolor="black">
-                                <tr>
-                                    <td width="30%">
-                                        <hr color="black">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            Name
-                                        </font>
-                                    </td>
-                                    <td width="70%">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            <input type="text" size="40">
-                                        </font>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="30%">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            Email
-                                        </font>
-                                    </td>
-                                    <td width="70%">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            <input type="email" size="40">
-                                        </font>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="30%">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            Number
-                                        </font>
-                                    </td>
-                                    <td width="70%">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            <input type="number" size="12">
-                                        </font>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="30%">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            Message
-                                        </font>
-                                    </td>
-                                    <td width="70%">
-                                        <font face="Verdana" size="4" 
-                                            color="#ffffff">
-                                            <textarea rows="5" 
-                                                cols="37">
-                                            </textarea>
-                                        </font>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="30%">
-                                        &nbsp;
-                                    </td>
-                                    <td width="70%">
-                                        <button type="Submit">
-                                            <font face="Verdana" 
-                                                size="4" color="black">
-                                                <b>Submit</b>
-                                            </font>
-                                        </button>
-                                        <hr color="black">
-                                        <hr color="black">
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            &nbsp;
-                            &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table> -->
-    <!--Contact(end)-->
-
-
-    <!--Footer1(start)-->
-    <table id="footer" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="grey">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
-                    <tr>
-                        <td width="13%" valign="top">
-
-                            <a href="https://www.linkedin.com/in/mohammed-fahed/" style="text-decoration:none">
-                                <b>LinkedIn</b>
-                            </a>
-                        </td>
-
-                        <td>
-                            |
-                        </td>
-
-                        <td width="13%" valign="top">
-
-                            <a href="https://github.com/fahedm" style="text-decoration:none">
-                                <b>GitHub</b>
-                            </a>
-                        </td>
-
-                        <td>
-                            |
-                        </td>
-
-                        <td width="13%" valign="top">
-                            <a href="https://www.hackerrank.com/profile/fahedm" style="text-decoration:none">
-                                <b>HackerRank</b>
-                            </a>
-                        </td>
-
-                        <td>
-                            |
-                        </td>
-
-                        <td width="13%" valign="top">
-                            <a href="https://www.geeksforgeeks.org/user/fahedmohd8750" style="text-decoration:none">
-                                <b>GeeksforGeeks</b>
-                            </a>
-                        </td>
-
-                        <td>
-                            |
-                        </td>
-
-                        <td width="13%" valign="top">
-
-                            <a href="mailto:fahedmohd8750@gmail.com" style="text-decoration:none">
-                                <b>Email</b>
-                            </a>
-                        </td>
-
-                        <td>
-                            |
-                        </td>
-
-                        <td width="13%" valign="top">
-
-                            <a href="#header" style="text-decoration:none">
-                                <b>Website</b>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Footer1(end)-->
-
-
-    <!--Footer2(start)-->
-    <table id="footer" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
-        <tr>
-            <td>
-                <table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
-                    <tr>
-                        <td width="80%" valign="top">
-                            <font face="Verdana" color="grey" size="5">
-                            </font>
-                        </td>
-
-                        <td width="10%">
-                            <font face="arial" color="black" size="5">
-                                <a href="#header" style="text-decoration:none">
-                                    <font face="Verdana" color="grey" size="6">
-                                        <b>TOP&nbsp;</b>
-                                    </font>
-                                </a>
-                            </font>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Footer2(end)-->
-
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gray">
+        <div class="container">
+            <a class="navbar-brand fs-2" href="#">Mohammed Fahed</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fs-5">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- About -->
+    <section id="about" class="py-5 bg-black">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="Fahed-pic.jpeg" alt="Profile" class="profile-img img-fluid shadow">
+                </div>
+                <div class="col-md-8">
+                    <p class="fs-5">
+                        Hi, I’m <b>Mohammed Fahed</b>, a <b>Software Engineer</b> passionate about building scalable
+                        backend systems and solving complex problems with clean, minimalistic solutions.
+                        I specialize in <b>Python, REST APIs, Cloud, Linux, and Databases</b>.<br>
+                        With 8+ years of experience, I’ve built tools and systems that empower teams and deliver
+                        measurable impact.
+                        Let’s create something innovative together!
+                    </p>
+                    <!-- <p class="fs-5">
+                        Thanks for your interest, here is a quick story of me.<br>
+                        I am Mohammed Fahed, a BITS alumunus and a Software Engineer.<br>
+                        I do my work mainly on the Backend. Python, RestAPI and Algorithms are my stronger sections.
+                        Besides these I know Cloud, Linux and Databases as well.<br>
+                        I am passionate about learning new technologies and solving complex problems with minimalistic approaches.
+                        I value collaboration, quality, and innovation, and I aim to deliver high-performance and scalable solutions
+                        that meet the needs and expectations of the users and the clients.<br>
+                        I am always looking for new challenges and opportunities to grow and contribute to the software engineering field.<br>
+                        I have more than 8 years of experience in software engineering. I Have developed several tools to support storage engineers,
+                        team leads, and management, such as log analysers, intervention portals, and automated reports.<br>
+                        I participated in all stages of SDLC, from design to maintenance, and conducted code reviews.<br>
+                        I have a Master's and Bachelor's from BITS Pilani and a Diploma from Jamia Millia Islamia.<br>
+                        Thanks again for reading this, Let's work together to build things that are ground-breaking.<br>
+                        <b>Cheers, Fahed.</b>
+                    </p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="py-5 bg-light text-dark">
+        <div class="container">
+            <h2 class="text-center mb-4 display-6">Projects</h2>
+            <hr class="mx-auto" style="width:90px;">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Escalation Dashboard</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Intervention Portal</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Leave And Attendance Tracker</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Log Analyzer for Storage Devices</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Storage and Backup Manager</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Monitoring Tool</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Vertical Timeline Experience -->
+    <section id="experience" class="py-5 bg-black">
+        <div class="container">
+            <h2 class="text-secondary text-center mb-5 display-6">Experience</h2>
+            <div class="timeline">
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-secondary text-black">1</div>
+                    <div class="timeline-content">
+                        <h5>Senior Software Engineer</h5>
+                        <h6 class="text-secondary">Persistent Systems | Nov 2024 – Present</h6>
+                        <ul>
+                            <li>Designed and implemented cloud-based scalable systems.</li>
+                            <li>Delivered multiple projects and POCs impacting storage and backend operations.</li>
+                            <li>Collaborated across teams to optimize performance and maintain high code quality.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-secondary text-black">2</div>
+                    <div class="timeline-content">
+                        <h5>Senior Engineer</h5>
+                        <h6 class="text-secondary">Movate Technologies | Oct 2022 – Nov 2024</h6>
+                        <ul>
+                            <li>Implemented new technologies to enhance system performance.</li>
+                            <li>Delivered projects and POCs for enterprise clients.</li>
+                            <li>Mentored team members and conducted code reviews.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-secondary text-black">3</div>
+                    <div class="timeline-content">
+                        <h5>Software Engineer</h5>
+                        <h6 class="text-secondary">Wipro Limited | Dec 2016 – Oct 2022</h6>
+                        <ul>
+                            <li>Gained expertise in backend development, cloud, and databases.</li>
+                            <li>Delivered multiple projects supporting diverse business units.</li>
+                            <li>Participated in full SDLC — design, implementation, and maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-light py-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <!-- Social Links -->
+            <div class="mb-2">
+                <a href="https://www.linkedin.com/in/mohammed-fahed/" target="_blank" rel="noopener noreferrer"
+                    class="text-light mx-2"><b>LinkedIn</b></a> |
+                <a href="https://github.com/fahedm" target="_blank" rel="noopener noreferrer"
+                    class="text-light mx-2"><b>GitHub</b></a> |
+                <a href="https://www.hackerrank.com/profile/fahedm" target="_blank" rel="noopener noreferrer"
+                    class="text-light mx-2"><b>HackerRank</b></a> |
+                <!-- <a href="https://www.geeksforgeeks.org/user/fahedmohd8750" target="_blank" rel="noopener noreferrer"
+                    class="text-light mx-2"><b>GeeksforGeeks</b></a> | -->
+                <a href="mailto:fahedmohd8750@gmail.com" class="text-light mx-2"><b>Email</b></a>
+            </div>
+
+            <!-- Top Button -->
+            <div class="mb-2">
+                <button id="topBtn" class="btn btn-light btn-sm">
+                    Top
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script>
+    const topBtn = document.getElementById("topBtn");
+
+    // Show button when scrolling down 100px
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+    };
+
+    // Scroll smoothly to top when clicked
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
 
 </html>
