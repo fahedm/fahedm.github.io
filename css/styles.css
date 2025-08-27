@@ -1,0 +1,144 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 250px;
+}
+
+.text-typing h3 {
+  margin: 0px;
+  white-space: nowrap;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  animation: typing 4s steps(22, end) forwards, blink 1s infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%
+  }
+
+  100% {
+    width: 100%
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    border-right: 2px solid transparent;
+  }
+
+  50% {
+    border-right: 2px solid #222;
+  }
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 3px solid #6c757d;
+  /* Vertical line color */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2.5rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.timeline-content h5 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.timeline-content ul {
+  margin-bottom: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  display: none;
+  /* Hidden by default */
+}
+
+.d-flex {
+  display: flex !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(77, 79, 78, 0.9);
+}
+.portfolio-item .portfolio-item-caption:hover{
+  opacity: 0.5;
+}
+.portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.portfolio-modal .btn-close {
+  color: #1abc9c;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.portfolio-modal .portfolio-modal-title {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+@media (min-width: 992px) {
+  .portfolio-modal .portfolio-modal-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
