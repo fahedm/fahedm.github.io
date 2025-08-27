@@ -25,20 +25,8 @@ const projects = [
         details: "Internal tool to store and retrieve versioned configuration and documentation files securely, with search and audit logging."
     },
     {
-        name: "Escalation Notification System",
-        details: "A distributed notification service to alert teams about critical incidents in near real-time using Python and cloud messaging services."
-    },
-    {
         name: "Monitoring Automation Scripts",
         details: "Python scripts to automate log collection, parsing, and generating alerts for storage devices and backend services."
-    },
-    {
-        name: "HPE Intervention Tool",
-        details: "Custom portal developed for HPE to track support tickets, interventions, and generate metrics to improve team efficiency."
-    },
-    {
-        name: "Storage Device Performance Analyzer",
-        details: "A tool to analyze and visualize storage device performance over time, detect anomalies, and generate actionable insights."
     },
     {
         name: "Escalation Dashboard",
